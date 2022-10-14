@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/log.css">
+</head>
+<body>
+    <div id="container">
+        <div id="tabs">
+            <p id="lt" class="tabs" onclick="loginTabFun()">Đăng.. nhập</p>
+            <p id="rt" class="tabs" onclick="regTabFun()">Đăng..   Ký</p>
+
+            <div id="clear"></div>
+        </div>
+
+        <div id="cont">
+            <div id="login" class="comm">
+                <h3>Đăng Nhập</h3>
+
+                <input id="se" type="email" placeholder="Email" required/>
+                <input id="sp" type="password" placeholder="Password" required/>
+                <button id="log-submitBtn" class="submit-btn">Đăng Nhập</button>
+
+               
+            </div>
+            <div id="register" class="comm">
+                <h3>Đăng Ký</h3>
+
+                <input id="re" type="email" placeholder="Email" required/>
+                <input id="rp" type="password" placeholder="Password" required/>
+                <input id="rrp" type="password" placeholder="Re write Password" required/>
+                <button id="submitBtn" class="submit-btn">Đăng ký</button>
+
+            </div >
+           
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/log.js"></script>
+</body>
+</html>
