@@ -1,0 +1,61 @@
+
+.list-unstyled li{
+    background: azure;
+}
+body{
+    background-color: rgb(214, 8, 25);
+    
+}
+.left {
+    min-height: 100vh;
+    border-right: 2px solid black;
+    background: #888888;
+}
+
+.left li.active{
+    background-color:red;
+}
+
+.list-unstyled li a{
+    padding: 12px;
+    font-size: 16px;
+    color:rgb(106, 212, 18);
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    border-bottom: 2px solid rgb(44, 93, 255);
+}
+.close{
+    float:right;
+    color: rgb(128, 128, 128);
+    font-weight: bold;
+    font-size: 26;
+    cursor: pointer;
+}
+
+.conten-modal{
+    background-color: red;
+    margin: auto;
+    padding: 20px;
+    color: 1px solid gray;
+    width: 85%;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 40px;;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);;
+}
+
+h1{
+    color: red;
+  text-align: center;
+  font-size: 40px;
+}

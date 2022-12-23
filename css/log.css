@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+body {
+    background:rgb(2, 143, 199);
+    font-family: RooneySans-Regular, "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", sans-serif;;
+}
+#container {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+.tabs {
+    border-radius: 10px;
+    display: table-cell;
+    width: 30%;
+    background-color:#ffffff;
+    padding: 10px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 0px;
+    position: relative;
+    font-size: 1.3em;
+    color: azure;
+    box-shadow: .1rem .1rem .5rem rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(222, 226, 230, 0.199);
+}
+.tabs:hover, p{
+    cursor: pointer;
+}
+
+#rt{
+    background-color:rgb(226, 5, 5);
+    box-shadow: .1rem .1rem .5rem rgba(0, 0, 0, 0.2);
+}
+
+#rt:hover{
+    transition: all .5s;
+    transform: translateY(-2px);
+    box-shadow: 1rem 1rem .5rem rgba(0, 0, 0, 0.2);
+}
+
+#lt {
+    background-color:rgb(221, 5, 5);
+    box-shadow: .1rem .1rem .5rem rgba(0, 0, 0, 0.2);
+    
+}
+
+#lt:hover{
+    transition: all .5s;
+    transform: translateY(-2px);
+    box-shadow: 1rem 1rem .5rem rgba(0, 0, 0, 0.2);
+}
+#cont {
+    width: 100%;
+    height: 300px;
+    border: 1px solid rgb(222, 226, 230);
+    box-shadow: 1rem 1rem .5rem rgba(0, 0, 0, 0.2);
+    background-color:#ffffff;
+    border-radius: 10px;
+}
+
+input{
+    display: block;
+    width: 250px;
+    margin: 10px 13px;
+    padding: 10px;
+    font-size: 1.3em;
+    color:rgb(27, 27, 27);
+    border-radius: 10px;
+    border-radius: 1px solid red;
+}
+
+.submit-btn {
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.3em;
+    border-radius: 10px;
+    width: 150px;
+    border-radius: 1px solid red;
+    color: white;
+    margin-top: 20px;
+    background-color: red;
+}
+
+.submit-btn:hover{
+    transition: all .5s;
+    transform: translateY(-2px);
+    border-radius: 1px solid red;
+    box-shadow: 1rem 1rem .5rem rgba(0, 0, 0, 0.2);
+}
+
+#clear {
+    clear: both;
+}
+
+.comm {
+    position: absolute;
+    visibility: hidden;
+}
+#login {
+    visibility: visible;
+}
+
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    color: black;
+    border-radius: 10px;
+}
+
+#forgot h3 {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#forgot div {
+    margin-top: 30px;
+}
+p {
+    padding: 10px 15px;
+    font-size: 1.3em;
+    color: #ffffff;
+    border-radius: 10px;
+}
+/*#footer {
+    width: 300px;
+    margin: 10px auto;
+    text-align: center;
+    color: rgba(9, 118, 155, 0.91);
+
+}*/

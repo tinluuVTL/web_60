@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/user.css">
+    <title>Công Việc</title>
+</head>
+
+<body class="nav-headerr">
+    <section id="headerr">
+        <div class="header containerr">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="./congviec.html" style="color: rgb(241, 99, 4)">
+                        <h1>Quản Lí</h1>
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+                    <ul >
+                        <li><a href="home.html" >Trang Chủ</a></li>
+                        
+                        <li><a href="./congviec.html" style="border-bottom: 10px solid rgb(247, 137, 11); color: rgb(235, 101, 5);" >Công Việc</a></li>
+                        <li><a href="./muavu.html" >Mùa Vụ</a></li>
+                        <li><a href="./thietbi.html" >Thiết Bị</a></li>
+                        
+                        <li><a href="./nhanvien.html" >Nhân Viên</a></li>
+                        <li><a href="./user.html" >Người dùng</a></li>
+                        
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<body class="bg-dark">
+
+    <div class="">
+        <div class="d-flex">
+            <div class="left" style="width: 20%;">
+                <h2 class="text-center logo" style="color: rgb(231, 101, 7);">Quản lí công việc</h2>
+                <ul class="list-unstyledd">
+                    <p class="active"><a href="./congviec.html" style="background-color: rgba(236, 112, 11, 0.932); color: rgb(219, 173, 173);">Danh sách công việc</a></p>
+                    <p><a href="#">Thống kê công việc</a></p>
+                    <p><a href="#">Công Việc đang chờ</a></p>
+                    <p><a href="#">công việc cuối tháng</a></p>
+                    <p><a href="#">Công Việc Tổng kết</a></p>
+                </ul>
+            </div>
+           
+            <div style="width: 80%;" class="background">
+                <p>
+                    <button id="addsv" class="btn btn-secondary" style="background-color: rgb(233, 115, 5);">Thêm việc</button>
+                    <div class="search-tool">
+                        <p>
+                            <button id="search-click"><i class="fas fa-search"></i></button>
+                            <input id="search-input" type="text" class="form-control">
+                        </p>
+                    </div>
+                </p>
+
+                <h3 class="text-center logo" style="color: rgb(235, 138, 11);">Danh Sách</h3>
+                <a href="./user.html" class="btn btn-secondary d-none" id="backHome"></a>
+                <table id="sv-tbl" class="table">
+                    <thead>
+                        <tr style="color: rgb(255, 102, 0);">
+                            <th>STT</th>
+                            <th>Tên Cômg việc</th>
+                            <th>Công việc thuộc mùa vụ</th>
+                            <th>Ngày bắt đầu</th>
+                           
+                           
+                            <th>Mô tả công việc</th>
+                            <th>Trạng thái</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td style="text-align: center;" colspan="8"><img style="height: 100px"
+                                src="./img/b.gif" alt=""></td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       
+        <div id="addModal" class="modal">
+           
+            <div class="conten-modal">
+                <div id="addsvtab">
+                    <form>
+                        <input style="display: none;" type="text" id="editId" value="">
+                        <button id="btnCloseModal" class="close">&times;</button><br>
+                        <div style="width: 80%;" class="bg-light px-4 py-3">
+                            <form>
+                                <input style="display: none;" type="text" id="editId">
+
+                                <div class="form-group">
+                                    <label>Tên công việc</label>
+                                    <input id="tencv" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Công việc thuộc mùa vụ</label>
+                                    <input id="cvthuoc" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Ngày bắt đầu</label>
+                                    <input id="ngaybd" type="text" class="form-control">
+                                </div>
+                               
+                                
+                                <div class="form-group">
+                                    <label>Mô tả công việc</label>
+                                    <input id="mota" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Trạng thái</label>
+                                    <input id="trangthai" type="text" class="form-control">
+                                </div>
+                        </div>
+                            <p id="error">vui lòng nhập đầy đủ</p>
+                            <button type="button" class="btn btn-primary mt-3" id="submit">Xác nhận</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/congviec.js"></script>
+</body>
+
+</html>

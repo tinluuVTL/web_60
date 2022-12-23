@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/user.css">
+    <title>Mùa Vụ</title>
+</head>
+
+<body class="nav-headerr">
+    <section id="headerr">
+        <div class="header containerr">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="./muavu.html" style="color: rgb(48, 202, 1)">
+                        <h1>Quản Lí</h1>
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+                    <ul >
+                        <li><a href="home.html" >Trang Chủ</a></li>
+                        <li><a href="./congviec.html" >Công Việc</a></li>
+                        <li><a href="./muavu.html" style="border-bottom: 10px solid rgb(48, 202, 1); color: rgb(48, 202, 1);">Mùa Vụ</a></li>
+                        <li><a href="./thietbi.html" >Thiết Bị</a></li>
+                        
+                        <li><a href="./nhanvien.html" >Nhân Viên</a></li>
+                        <li><a href="./user.html" >Người dùng</a></li>
+                        
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<body class="bg-dark">
+
+    <div class="">
+        <div class="d-flex">
+            <div class="left" style="width: 20%;">
+                <h2 class="text-center logo" style="color: rgb(48, 202, 1);">Quản lí Mùa Vụ</h2>
+                <ul class="list-unstyledd">
+                    <p class="active"><a href="./muavu.html" style="background-color: greenyellow; color: red;">Danh sách các mùa vụ</a></p>
+                    <p><a href="#">Thống kê mùa vụ</a></p>
+                    <p><a href="#">Mùa Vụ sắp tới</a></p>
+                </ul>
+            </div>
+           
+            <div style="width: 80%;" class="background">
+                <p>
+                    <button id="addsv" class="btn btn-secondary" style="background-color: greenyellow;">Thêm mùa vụ</button>
+                    <div class="search-tool">
+                        <p>
+                            <button id="search-click"><i class="fas fa-search"></i></button>
+                            <input id="search-input" type="text" class="form-control">
+                        </p>
+                    </div>
+                </p>
+
+                <h3 class="text-center logo" style="color: rgb(8, 223, 37);">Danh Sách</h3>
+                <a href="./user.html" class="btn btn-secondary d-none" id="backHome"></a>
+                <table id="sv-tbl" class="table">
+                    <thead>
+                        <tr style="color: rgb(50, 202, 4);">
+                            <th>STT</th>
+                            <th>Tên Mùa Vụ</th>
+                            <th>sản lượng</th>
+                            <th>Đơn vị tính(tấn)</th>
+                            <th>Ngày bắt đầu</th>
+                            <Th>Ngày thu hoạch</Th>
+                            <th>Trạng thái</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td style="text-align: center;" colspan="8"><img style="height: 100px"
+                                src="./img/b.gif" alt=""></td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       
+        <div id="addModal" class="modal">
+           
+            <div class="conten-modal">
+                <div id="addsvtab">
+                    <form>
+                        <input style="display: none;" type="text" id="editId" value="">
+                        <button id="btnCloseModal" class="close">&times;</button><br>
+                        <div style="width: 80%;" class="bg-light px-4 py-3">
+                            <form>
+                                <input style="display: none;" type="text" id="editId">
+
+                                <div class="form-group">
+                                    <label>Tên mùa vụ</label>
+                                    <input id="tenmv" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>sảng lượng</label>
+                                    <input id="sanluong" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>đơn vị tính(tấn)</label>
+                                    <input id="donvi" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>ngày bắt đầu</label>
+                                    <input id="ngaybd" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>ngày thu hoạch(dự kiến)</label>
+                                    <input id="ngayth" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Trạng thái</label>
+                                    <input id="trangthai" type="text" class="form-control">
+                                </div>
+                        </div>
+                            <p id="error">vui lòng nhập đầy đủ</p>
+                            <button type="button" class="btn btn-primary mt-3" id="submit">Xác nhận</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/muavu.js"></script>
+</body>
+
+</html>
